@@ -37,16 +37,7 @@
 		</repository>
   	</distributionManagement>
 	
-<build>
-    <plugins>
-        <plugin>
-            <groupId>org.apache.maven.plugins</groupId>
-            <artifactId>maven-compiler-plugin</artifactId>
-            <version>3.6.1</version>
-            <configuration>
-                <source>1.7</source>
-                <target>1.7</target>
-            </configuration>
+     <build>
         </plugin>
 	<plugin>
             <groupId>org.apache.maven.plugins</groupId>
@@ -56,17 +47,36 @@
     </plugins>
 </build>
 	 
-
-<plugin>  
- <groupId>org.apache.tomcat.maven</groupId>  
- <artifactId>tomcat8.5.35-maven-plugin</artifactId>  
- <version>2.2</version>  
- <configuration>  
-  <url>http://13.232.89.172:8082/manage</url>  
-  <server>TomcatServer</server>    *(From maven > settings.xml)*
-  <username>tomcat</username>  
-  <password>s3cret</password>   
- </configuration>   
-</plugin>   
-	
+ <build>
+  <plugins>
+   <plugin>
+    <groupId>org.apache.maven.plugins</groupId>
+    <artifactId>maven-war-plugin</artifactId>
+    <version>3.0.0</version>
+    <configuration>
+     <failOnMissingWebXml>false</failOnMissingWebXml>
+    </configuration>
+   </plugin>
+   <plugin>
+    <groupId>org.apache.maven.plugins</groupId>
+    <artifactId>maven-compiler-plugin</artifactId>
+    <version>3.5.1</version>
+    <configuration>
+     <source>1.8</source>
+     <target>1.8</target>
+     <encoding>UTF-8</encoding>
+    </configuration>
+   </plugin>
+   <plugin>
+    <groupId>org.apache.tomcat.maven</groupId>
+    <artifactId>tomcat8.5.35-maven-plugin</artifactId>
+    <version>2.2</version>
+    <configuration>
+     <url>http://13.232.89.172:8082/manager</url>
+     <username>joe</username>
+     <password>joe</password>
+    </configuration>
+   </plugin>
+  </plugins>
+ </build>
 </project>
