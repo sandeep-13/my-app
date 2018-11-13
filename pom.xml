@@ -56,7 +56,7 @@
     </plugins>
 </build>
 	 
-	<!-- Tomcat plugin -->  
+
 <plugin>  
  <groupId>org.apache.tomcat.maven</groupId>  
  <artifactId>tomcat8.5.35-maven-plugin</artifactId>  
