@@ -6,6 +6,8 @@
 	<packaging>war</packaging>
 	<version>0.0.4</version>
 	<name>my-app</name>
+	
+	<!=== demo github webhooks==>
 
 	<url>http://maven.apache.org</url>
 
