@@ -7,7 +7,6 @@
 	<version>0.0.4</version>
 	<name>my-app</name>
 	
-	<!=== demo github webhooks==>
 
 	<url>http://maven.apache.org</url>
 
@@ -27,7 +26,7 @@
 	
 	</dependencies>
 	
-	<distributionManagement>
+	<!--distributionManagement>
 		 <snapshotRepository>
 		    <id>nexus</id>
 		    <url>http://13.232.200.78:8081/repository/maven-snapshots/</url>
